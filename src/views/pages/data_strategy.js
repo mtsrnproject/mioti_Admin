@@ -15,9 +15,9 @@ import {
 import { getPageData, updataPageData, uploadImages } from 'src/services/pages_services'
 import { useLocation } from 'react-router-dom'
 
-export default function Inicio() {
+export default function Data_strategy() {
   // const location = useLocation()
-  const pageName = 'inicio'
+  const pageName = 'data_strategy'
 
   useEffect(() => {
     gettingPageData()

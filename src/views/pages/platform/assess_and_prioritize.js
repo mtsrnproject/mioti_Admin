@@ -15,24 +15,24 @@ import {
 import { getPageData, updataPageData, uploadImages } from 'src/services/pages_services'
 import { useLocation } from 'react-router-dom'
 
-export default function Inicio() {
-  // const location = useLocation()
-  const pageName = 'inicio'
-
-  useEffect(() => {
-    gettingPageData()
-  }, [pageName])
+export default function Assess_and_prioritize() {
+  const location = useLocation()
+  const pageName = location.pathname.substring(1)
 
   const [pageData, setPageData] = useState(null)
   const [pageImages, setPageImages] = useState(null)
   const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setPageImages(null)
+    setPageData(null)
+    gettingPageData()
+    setLoading(true)
+  }, [location])
 
   const gettingPageData = async () => {
     await getPageData(pageName).then((res) => {
       setPageData(res)
       setLoading(false)
-
-      console.log('pageData', res)
     })
   }
 
@@ -58,6 +58,7 @@ export default function Inicio() {
   const onChangeValue = (e, section, name) => {
     e.preventDefault()
     setPageData({ ...pageData, [`${section}`]: { ...pageData[section], [name]: e.target.value } })
+    console.log('pageData', pageData)
   }
 
   const onChangeImageValue = (e, section, name) => {
@@ -69,7 +70,7 @@ export default function Inicio() {
   }
 
   return (
-    <div className="pb-5">
+    <div>
       {pageData && !loading ? (
         <>
           <Section1
@@ -81,12 +82,6 @@ export default function Inicio() {
           <Section2
             pageData={pageData}
             section="section2"
-            onChangeImageValue={onChangeImageValue}
-            onChangeValue={onChangeValue}
-          />
-          <Side_Menu
-            pageData={pageData}
-            section="side_menu"
             onChangeImageValue={onChangeImageValue}
             onChangeValue={onChangeValue}
           />
@@ -126,12 +121,6 @@ export default function Inicio() {
             onChangeImageValue={onChangeImageValue}
             onChangeValue={onChangeValue}
           />
-          <Section9
-            pageData={pageData}
-            section="section9"
-            onChangeImageValue={onChangeImageValue}
-            onChangeValue={onChangeValue}
-          />
           <div className="d-grid gap-2 m-3">
             <CButton onClick={() => postpageData()} color="primary">
               Submit
@@ -144,30 +133,18 @@ export default function Inicio() {
     </div>
   )
 }
-const Section1 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+
+const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Section1 */}
+      {/* Section8
+       */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section1</CAccordionHeader>
+          <CAccordionHeader>Section8</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
-                id="floatingTextarea"
-                floatingLabel="title1_en"
-                value={data.title1_en}
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
-                id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
-              />
-            </CInputGroup>
-            <CInputGroup>
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
@@ -180,53 +157,93 @@ const Section1 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'button1_en')}
+                id="floatingTextarea"
+                value={data.button1_en}
+                floatingLabel="button1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'button1_fa')}
+                id="floatingTextarea"
+                value={data.button1_fa}
+                floatingLabel="button1_fa"
+              />
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section1 */}
+      {/* Section8
+       */}
     </div>
   )
 }
 
-const Section2 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Section2 */}
+      {/* Section7 */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section2</CAccordionHeader>
+          <CAccordionHeader>Section7</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
+                onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
-                value={data.title1_en}
-                floatingLabel="title1_en"
+                value={data.text1_en}
+                floatingLabel="text1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.text1_fa}
+                floatingLabel="text1_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
               />
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section2 */}
+      {/* Section7 */}
     </div>
   )
 }
-const Side_Menu = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+
+const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Side_Menu */}
+      {/* Section6 */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Side_Menu</CAccordionHeader>
+          <CAccordionHeader>Section6</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
               <CFormTextarea
@@ -256,56 +273,11 @@ const Side_Menu = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title2_fa"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title3_en')}
-                id="floatingTextarea"
-                value={data.title3_en}
-                floatingLabel="title3_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title3_fa')}
-                id="floatingTextarea"
-                value={data.title3_fa}
-                floatingLabel="title3_fa"
-              />
-            </CInputGroup>
-          </CAccordionBody>
-        </CAccordionItem>
-      </CAccordion>
-      {/* Side_Menu */}
-    </div>
-  )
-}
-
-const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
-  const data = pageData[section]
-  return (
-    <div>
-      {/* Section3 */}
-      <CAccordion activeItemKey={2}>
-        <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section3</CAccordionHeader>
-          <CAccordionBody>
-            <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
-                id="floatingTextarea"
-                value={data.title1_en}
-                floatingLabel="title1_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
-                id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
-              />
-              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
@@ -329,64 +301,7 @@ const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section3 */}
-    </div>
-  )
-}
-const Section4 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
-  const data = pageData[section]
-  return (
-    <div>
-      {/* Section4 */}
-      <CAccordion activeItemKey={2}>
-        <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section4</CAccordionHeader>
-          <CAccordionBody>
-            <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
-                id="floatingTextarea"
-                value={data.title1_en}
-                floatingLabel="title1_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
-                id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_en')}
-                id="floatingTextarea"
-                value={data.text1_en}
-                floatingLabel="text1_en"
-              />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
-                id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
-              />
-              <CFormFloating className="mb-1">
-                <CFormInput
-                  onChange={(e) => {
-                    onChangeImageValue(e, section, 'image1')
-                  }}
-                  type="file"
-                  id="floatingInput"
-                  size="sm"
-                />
-                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
-                  image1
-                </CFormLabel>
-              </CFormFloating>
-            </CInputGroup>
-          </CAccordionBody>
-        </CAccordionItem>
-      </CAccordion>
-      {/* Section4 */}
+      {/* Section6 */}
     </div>
   )
 }
@@ -447,14 +362,15 @@ const Section5 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
     </div>
   )
 }
-const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+
+const Section1 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Section6 */}
+      {/* Section1 */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section6</CAccordionHeader>
+          <CAccordionHeader>Section1</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
               <CFormTextarea
@@ -470,6 +386,20 @@ const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_fa"
               />
               <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
@@ -483,35 +413,35 @@ const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
-              <CFormFloating className="mb-1">
-                <CFormInput
-                  onChange={(e) => {
-                    onChangeImageValue(e, section, 'image1')
-                  }}
-                  type="file"
-                  id="floatingInput"
-                  size="sm"
-                />
-                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
-                  image1
-                </CFormLabel>
-              </CFormFloating>
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'button1_en')}
+                id="floatingTextarea"
+                value={data.button1_en}
+                floatingLabel="button1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'button1_fa')}
+                id="floatingTextarea"
+                value={data.button1_fa}
+                floatingLabel="button1_fa"
+              />
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section6 */}
+      {/* Section1 */}
     </div>
   )
 }
-const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+
+const Section2 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Section7 */}
+      {/* Section2 */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section7</CAccordionHeader>
+          <CAccordionHeader>Section2</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
               <CFormTextarea
@@ -532,71 +462,31 @@ const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
-              <CFormFloating className="mb-1">
-                <CFormInput
-                  onChange={(e) => {
-                    onChangeImageValue(e, section, 'image1')
-                  }}
-                  type="file"
-                  id="floatingInput"
-                  size="sm"
-                />
-                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
-                  image1
-                </CFormLabel>
-              </CFormFloating>
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section7 */}
+      {/* Section2 */}
     </div>
   )
 }
-const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+
+const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Section8 */}
+      {/* Section3 */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section8</CAccordionHeader>
+          <CAccordionHeader>Section3</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
-                id="floatingTextarea"
-                value={data.title1_en}
-                floatingLabel="title1_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
-                id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_en')}
-                id="floatingTextarea"
-                value={data.text1_en}
-                floatingLabel="text1_en"
-              />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
-                id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
-              />
               <CFormFloating className="mb-1">
                 <CFormInput
                   onChange={(e) => {
@@ -614,18 +504,19 @@ const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section8 */}
+      {/* Section3 */}
     </div>
   )
 }
-const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+
+const Section4 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
   const data = pageData[section]
   return (
     <div>
-      {/* Section9 */}
+      {/* Section4 */}
       <CAccordion activeItemKey={2}>
         <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Section9</CAccordionHeader>
+          <CAccordionHeader>Section4</CAccordionHeader>
           <CAccordionBody>
             <CInputGroup className="mb-1">
               <CFormTextarea
@@ -641,18 +532,44 @@ const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_fa"
               />
               <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
+              />
+            </CInputGroup>
+            <CInputGroup>
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'button1_en')}
+                id="floatingTextarea"
+                value={data.button1_en}
+                floatingLabel="button1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'button1_fa')}
+                id="floatingTextarea"
+                value={data.button1_fa}
+                floatingLabel="button1_fa"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -671,7 +588,7 @@ const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section9 */}
+      {/* Section4 */}
     </div>
   )
 }

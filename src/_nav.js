@@ -6,6 +6,11 @@ const _nav = [
     name: 'Inicio',
     to: '/',
   },
+  {
+    component: CNavItem,
+    name: 'Data Strategy',
+    to: '/data_strategy',
+  },
 ]
 
 export default _nav
