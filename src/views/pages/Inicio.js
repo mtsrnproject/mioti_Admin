@@ -84,12 +84,7 @@ export default function Inicio() {
             onChangeImageValue={onChangeImageValue}
             onChangeValue={onChangeValue}
           />
-          <Side_Menu
-            pageData={pageData}
-            section="side_menu"
-            onChangeImageValue={onChangeImageValue}
-            onChangeValue={onChangeValue}
-          />
+
           <Section3
             pageData={pageData}
             section="section3"
@@ -129,6 +124,18 @@ export default function Inicio() {
           <Section9
             pageData={pageData}
             section="section9"
+            onChangeImageValue={onChangeImageValue}
+            onChangeValue={onChangeValue}
+          />
+          <Section10
+            pageData={pageData}
+            section="section10"
+            onChangeImageValue={onChangeImageValue}
+            onChangeValue={onChangeValue}
+          />
+          <Section11
+            pageData={pageData}
+            section="section11"
             onChangeImageValue={onChangeImageValue}
             onChangeValue={onChangeValue}
           />
@@ -202,8 +209,8 @@ const Section2 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'title1_en')}
                 id="floatingTextarea"
-                value={data.title1_en}
                 floatingLabel="title1_en"
+                value={data.title1_en}
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'title1_fa')}
@@ -211,67 +218,38 @@ const Section2 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.title1_fa}
                 floatingLabel="title1_fa"
               />
+            </CInputGroup>
+            <CInputGroup>
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text1_en')}
+                id="floatingTextarea"
+                value={data.text1_en}
+                floatingLabel="text1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                id="floatingTextarea"
+                value={data.text1_fa}
+                floatingLabel="text1_fa"
+              />
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'video1')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  video1
+                </CFormLabel>
+              </CFormFloating>
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
       {/* Section2 */}
-    </div>
-  )
-}
-const Side_Menu = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
-  const data = pageData[section]
-  return (
-    <div>
-      {/* Side_Menu */}
-      <CAccordion activeItemKey={2}>
-        <CAccordionItem itemKey={1}>
-          <CAccordionHeader>Side_Menu</CAccordionHeader>
-          <CAccordionBody>
-            <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
-                id="floatingTextarea"
-                value={data.title1_en}
-                floatingLabel="title1_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
-                id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title2_en')}
-                id="floatingTextarea"
-                value={data.title2_en}
-                floatingLabel="title2_en"
-              />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
-                id="floatingTextarea"
-                value={data.title2_fa}
-                floatingLabel="title2_fa"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title3_en')}
-                id="floatingTextarea"
-                value={data.title3_en}
-                floatingLabel="title3_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title3_fa')}
-                id="floatingTextarea"
-                value={data.title3_fa}
-                floatingLabel="title3_fa"
-              />
-            </CInputGroup>
-          </CAccordionBody>
-        </CAccordionItem>
-      </CAccordion>
-      {/* Side_Menu */}
     </div>
   )
 }
@@ -312,6 +290,72 @@ const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_en')}
+                id="floatingTextarea"
+                value={data.text4_en}
+                floatingLabel="text4_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_fa')}
+                id="floatingTextarea"
+                value={data.text4_fa}
+                floatingLabel="text4_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_en')}
+                id="floatingTextarea"
+                value={data.text5_en}
+                floatingLabel="text5_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_fa')}
+                id="floatingTextarea"
+                value={data.text5_fa}
+                floatingLabel="text5_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_en')}
+                id="floatingTextarea"
+                value={data.text6_en}
+                floatingLabel="text6_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_fa')}
+                id="floatingTextarea"
+                value={data.text6_fa}
+                floatingLabel="text6_fa"
+              />
               <CFormFloating className="mb-1">
                 <CFormInput
                   onChange={(e) => {
@@ -323,6 +367,34 @@ const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 />
                 <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
                   image1
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image2')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image2
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image3')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image3
                 </CFormLabel>
               </CFormFloating>
             </CInputGroup>
@@ -356,32 +428,57 @@ const Section4 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_fa"
               />
               <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
-              <CFormFloating className="mb-1">
-                <CFormInput
-                  onChange={(e) => {
-                    onChangeImageValue(e, section, 'image1')
-                  }}
-                  type="file"
-                  id="floatingInput"
-                  size="sm"
-                />
-                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
-                  image1
-                </CFormLabel>
-              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
@@ -413,32 +510,57 @@ const Section5 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_fa"
               />
               <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
-              <CFormFloating className="mb-1">
-                <CFormInput
-                  onChange={(e) => {
-                    onChangeImageValue(e, section, 'image1')
-                  }}
-                  type="file"
-                  id="floatingInput"
-                  size="sm"
-                />
-                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
-                  image1
-                </CFormLabel>
-              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
@@ -470,19 +592,139 @@ const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_fa"
               />
               <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_en')}
+                id="floatingTextarea"
+                value={data.text4_en}
+                floatingLabel="text4_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_fa')}
+                id="floatingTextarea"
+                value={data.text4_fa}
+                floatingLabel="text4_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_en')}
+                id="floatingTextarea"
+                value={data.text5_en}
+                floatingLabel="text5_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_fa')}
+                id="floatingTextarea"
+                value={data.text5_fa}
+                floatingLabel="text5_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_en')}
+                id="floatingTextarea"
+                value={data.text6_en}
+                floatingLabel="text6_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_fa')}
+                id="floatingTextarea"
+                value={data.text6_fa}
+                floatingLabel="text6_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text7_en')}
+                id="floatingTextarea"
+                value={data.text7_en}
+                floatingLabel="text7_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text7_fa')}
+                id="floatingTextarea"
+                value={data.text7_fa}
+                floatingLabel="text7_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text8_en')}
+                id="floatingTextarea"
+                value={data.text8_en}
+                floatingLabel="text8_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text8_fa')}
+                id="floatingTextarea"
+                value={data.text8_fa}
+                floatingLabel="text8_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text9_en')}
+                id="floatingTextarea"
+                value={data.text9_en}
+                floatingLabel="text9_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text9_fa')}
+                id="floatingTextarea"
+                value={data.text9_fa}
+                floatingLabel="text9_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
               <CFormFloating className="mb-1">
                 <CFormInput
                   onChange={(e) => {
@@ -496,7 +738,103 @@ const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                   image1
                 </CFormLabel>
               </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image2')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image2
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image3')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image3
+                </CFormLabel>
+              </CFormFloating>
             </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image4')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image4
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image5')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image5
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image6')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image6
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image7')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image7
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image8')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image8
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1"></CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
@@ -515,31 +853,85 @@ const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
           <CAccordionBody>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_en')}
-                id="floatingTextarea"
-                value={data.title1_en}
-                floatingLabel="title1_en"
-              />
-              <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
-                id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
-              />
-              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_en')}
+                id="floatingTextarea"
+                value={data.text4_en}
+                floatingLabel="text4_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_fa')}
+                id="floatingTextarea"
+                value={data.text4_fa}
+                floatingLabel="text4_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_en')}
+                id="floatingTextarea"
+                value={data.text5_en}
+                floatingLabel="text5_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_fa')}
+                id="floatingTextarea"
+                value={data.text5_fa}
+                floatingLabel="text5_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_en')}
+                id="floatingTextarea"
+                value={data.text6_en}
+                floatingLabel="text6_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_fa')}
+                id="floatingTextarea"
+                value={data.text6_fa}
+                floatingLabel="text6_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
               <CFormFloating className="mb-1">
                 <CFormInput
                   onChange={(e) => {
@@ -551,6 +943,73 @@ const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 />
                 <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
                   image1
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image2')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image2
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image3')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image3
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image4')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image4
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image5')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image5
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image6')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image6
                 </CFormLabel>
               </CFormFloating>
             </CInputGroup>
@@ -584,18 +1043,84 @@ const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_fa"
               />
               <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_en')}
+                id="floatingTextarea"
+                value={data.text4_en}
+                floatingLabel="text4_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_fa')}
+                id="floatingTextarea"
+                value={data.text4_fa}
+                floatingLabel="text4_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_en')}
+                id="floatingTextarea"
+                value={data.text5_en}
+                floatingLabel="text5_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_fa')}
+                id="floatingTextarea"
+                value={data.text5_fa}
+                floatingLabel="text5_fa"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -608,6 +1133,48 @@ const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 />
                 <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
                   image1
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image2')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image2
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image3')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image3
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image4')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image4
                 </CFormLabel>
               </CFormFloating>
             </CInputGroup>
@@ -640,20 +1207,172 @@ const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.title1_fa}
                 floatingLabel="title1_fa"
               />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
                 id="floatingTextarea"
                 value={data.text1_en}
                 floatingLabel="text1_en"
               />
-            </CInputGroup>
-            <CInputGroup className="mb-1">
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_fa')}
                 id="floatingTextarea"
                 value={data.text1_fa}
                 floatingLabel="text1_fa"
               />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_en')}
+                id="floatingTextarea"
+                value={data.text2_en}
+                floatingLabel="text2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text2_fa')}
+                id="floatingTextarea"
+                value={data.text2_fa}
+                floatingLabel="text2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_en')}
+                id="floatingTextarea"
+                value={data.text3_en}
+                floatingLabel="text3_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text3_fa')}
+                id="floatingTextarea"
+                value={data.text3_fa}
+                floatingLabel="text3_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_en')}
+                id="floatingTextarea"
+                value={data.text4_en}
+                floatingLabel="text4_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text4_fa')}
+                id="floatingTextarea"
+                value={data.text4_fa}
+                floatingLabel="text4_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_en')}
+                id="floatingTextarea"
+                value={data.text5_en}
+                floatingLabel="text5_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text5_fa')}
+                id="floatingTextarea"
+                value={data.text5_fa}
+                floatingLabel="text5_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_en')}
+                id="floatingTextarea"
+                value={data.text6_en}
+                floatingLabel="text6_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text6_fa')}
+                id="floatingTextarea"
+                value={data.text6_fa}
+                floatingLabel="text6_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text7_en')}
+                id="floatingTextarea"
+                value={data.text7_en}
+                floatingLabel="text7_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text7_fa')}
+                id="floatingTextarea"
+                value={data.text7_fa}
+                floatingLabel="text7_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text8_en')}
+                id="floatingTextarea"
+                value={data.text8_en}
+                floatingLabel="text8_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text8_fa')}
+                id="floatingTextarea"
+                value={data.text8_fa}
+                floatingLabel="text8_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text9_en')}
+                id="floatingTextarea"
+                value={data.text9_en}
+                floatingLabel="text9_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text9_fa')}
+                id="floatingTextarea"
+                value={data.text9_fa}
+                floatingLabel="text9_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text10_en')}
+                id="floatingTextarea"
+                value={data.text10_en}
+                floatingLabel="text10_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text10_fa')}
+                id="floatingTextarea"
+                value={data.text10_fa}
+                floatingLabel="text10_fa"
+              />
+            </CInputGroup>
+          </CAccordionBody>
+        </CAccordionItem>
+      </CAccordion>
+      {/* Section9 */}
+    </div>
+  )
+}
+const Section10 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+  const data = pageData[section]
+  return (
+    <div>
+      {/* Section10 */}
+      <CAccordion activeItemKey={2}>
+        <CAccordionItem itemKey={1}>
+          <CAccordionHeader>Section10</CAccordionHeader>
+          <CAccordionBody>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title1_en')}
+                id="floatingTextarea"
+                value={data.title1_en}
+                floatingLabel="title1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                id="floatingTextarea"
+                value={data.title1_fa}
+                floatingLabel="title1_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
               <CFormFloating className="mb-1">
                 <CFormInput
                   onChange={(e) => {
@@ -667,11 +1386,233 @@ const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                   image1
                 </CFormLabel>
               </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image2')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image2
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image3')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image3
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image4')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image4
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image5')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image5
+                </CFormLabel>
+              </CFormFloating>
             </CInputGroup>
           </CAccordionBody>
         </CAccordionItem>
       </CAccordion>
-      {/* Section9 */}
+      {/* Section10 */}
+    </div>
+  )
+}
+
+const Section11 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
+  const data = pageData[section]
+  return (
+    <div>
+      {/* Section11 */}
+      <CAccordion activeItemKey={2}>
+        <CAccordionItem itemKey={1}>
+          <CAccordionHeader>Section11</CAccordionHeader>
+          <CAccordionBody>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title1_en')}
+                id="floatingTextarea"
+                value={data.title1_en}
+                floatingLabel="title1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                id="floatingTextarea"
+                value={data.title1_fa}
+                floatingLabel="title1_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_en')}
+                id="floatingTextarea"
+                value={data.title2_en}
+                floatingLabel="title2_en"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                id="floatingTextarea"
+                value={data.title2_fa}
+                floatingLabel="title2_fa"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text1_en')}
+                id="floatingTextarea"
+                value={data.text1_en}
+                floatingLabel="text1_en"
+              />
+              <CFormTextarea
+                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                id="floatingTextarea"
+                value={data.text1_fa}
+                floatingLabel="text1_fa"
+              />
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image1')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image1
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image2')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image2
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image3')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image3
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image4')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image4
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image5')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image5
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image6')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image6
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1">
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image7')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image7
+                </CFormLabel>
+              </CFormFloating>
+              <CFormFloating className="mb-1">
+                <CFormInput
+                  onChange={(e) => {
+                    onChangeImageValue(e, section, 'image8')
+                  }}
+                  type="file"
+                  id="floatingInput"
+                  size="sm"
+                />
+                <CFormLabel style={{ marginTop: -6 }} htmlFor="floatingInput">
+                  image8
+                </CFormLabel>
+              </CFormFloating>
+            </CInputGroup>
+            <CInputGroup className="mb-1"></CInputGroup>
+          </CAccordionBody>
+        </CAccordionItem>
+      </CAccordion>
+      {/* Section11 */}
     </div>
   )
 }
