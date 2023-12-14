@@ -3,8 +3,13 @@ import { CNavGroup, CNavItem } from '@coreui/react'
 const _nav = [
   {
     component: CNavItem,
-    name: 'Inicio',
+    name: 'Home',
     to: '/',
+  },
+  {
+    component: CNavItem,
+    name: 'Inicio',
+    to: '/inicio',
   },
   {
     component: CNavItem,

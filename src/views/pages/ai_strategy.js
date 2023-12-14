@@ -203,10 +203,10 @@ const Section1 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 value={data.title1_en}
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
             </CInputGroup>
             <CInputGroup>
@@ -217,10 +217,10 @@ const Section1 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="text1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
             </CInputGroup>
           </CAccordionBody>
@@ -248,10 +248,10 @@ const Section2 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
             </CInputGroup>
           </CAccordionBody>
@@ -278,10 +278,10 @@ const Side_Menu = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'title2_en')}
@@ -292,10 +292,10 @@ const Side_Menu = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title2_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title2_zh')}
                 id="floatingTextarea"
-                value={data.title2_fa}
-                floatingLabel="title2_fa"
+                value={data.title2_zh}
+                floatingLabel="title2_zh"
               />
             </CInputGroup>
           </CAccordionBody>
@@ -323,10 +323,10 @@ const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -337,10 +337,10 @@ const Section3 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -380,10 +380,10 @@ const Section4 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -394,10 +394,10 @@ const Section4 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -437,10 +437,10 @@ const Section5 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -451,10 +451,10 @@ const Section5 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -494,10 +494,10 @@ const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -508,10 +508,10 @@ const Section6 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -551,10 +551,10 @@ const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -565,10 +565,10 @@ const Section7 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -608,10 +608,10 @@ const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -622,10 +622,10 @@ const Section8 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -665,10 +665,10 @@ const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -679,10 +679,10 @@ const Section9 = ({ pageData, section, onChangeValue, onChangeImageValue }) => {
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -722,10 +722,10 @@ const Section10 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -736,10 +736,10 @@ const Section10 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -779,10 +779,10 @@ const Section11 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -793,10 +793,10 @@ const Section11 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -836,10 +836,10 @@ const Section12 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -850,10 +850,10 @@ const Section12 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -893,10 +893,10 @@ const Section13 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -907,10 +907,10 @@ const Section13 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -950,10 +950,10 @@ const Section14 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -964,10 +964,10 @@ const Section14 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -1007,10 +1007,10 @@ const Section15 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -1021,10 +1021,10 @@ const Section15 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
@@ -1064,10 +1064,10 @@ const Section16 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
                 floatingLabel="title1_en"
               />
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'title1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'title1_zh')}
                 id="floatingTextarea"
-                value={data.title1_fa}
-                floatingLabel="title1_fa"
+                value={data.title1_zh}
+                floatingLabel="title1_zh"
               />
               <CFormTextarea
                 onChange={(e) => onChangeValue(e, section, 'text1_en')}
@@ -1078,10 +1078,10 @@ const Section16 = ({ pageData, section, onChangeValue, onChangeImageValue }) => 
             </CInputGroup>
             <CInputGroup className="mb-1">
               <CFormTextarea
-                onChange={(e) => onChangeValue(e, section, 'text1_fa')}
+                onChange={(e) => onChangeValue(e, section, 'text1_zh')}
                 id="floatingTextarea"
-                value={data.text1_fa}
-                floatingLabel="text1_fa"
+                value={data.text1_zh}
+                floatingLabel="text1_zh"
               />
               <CFormFloating className="mb-1">
                 <CFormInput
