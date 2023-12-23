@@ -32,15 +32,29 @@ const Login = () => {
         dispatch({ type: 'set', user: res.data })
         localStorage.setItem('user', JSON.stringify(res.data))
         axios.defaults.headers.common['Authorization'] = res.data.token
-        navigate('/', { replace: true })
+        navigate('/home', { replace: true })
       } else {
         return toast('Wrong Password')
       }
     })
   }
 
+  const styles = {
+    container: {
+      backgroundImage: `url(https://img.freepik.com/free-photo/landscape-green-grassland_1409-5576.jpg?t=st=1702540510~exp=1702544110~hmac=2daae7bf9ee5e529eb81190bf9d673629562eea5f1bb94a68de71aab459e0083&w=1380)`,
+      backgroundPosition: 'cover',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      width: '100%',
+      height: '100vh',
+    },
+  }
+
   return (
-    <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <div
+      style={styles.container}
+      className="bg-light min-vh-100 d-flex flex-row align-items-center"
+    >
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md={8}>

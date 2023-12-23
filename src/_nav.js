@@ -4,7 +4,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Home',
-    to: '/',
+    to: '/home',
   },
   {
     component: CNavItem,
