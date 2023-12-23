@@ -11,8 +11,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 
 // axios.defaults.baseURL = 'https://app-22c52576-ffaa-44f5-8dc7-968c2c19ecda.cleverapps.io/'
-axios.defaults.baseURL = 'http://127.0.0.1:3001'
-// axios.defaults.baseURL = 'https://api.onegroupinnovate.com/'
+// axios.defaults.baseURL = 'http://127.0.0.1:3001'
+axios.defaults.baseURL = 'https://mioti.onegroupinnovate.com/'
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>

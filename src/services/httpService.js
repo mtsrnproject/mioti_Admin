@@ -3,7 +3,6 @@ import axios from 'axios'
 
 export const httpConfig = async (token) => {
   axios.defaults.headers.post['Content-Type'] = 'application/json'
-  axios.defaults.baseURL = 'http://127.0.0.1:3001'
   // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
   // axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 }
