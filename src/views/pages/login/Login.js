@@ -41,7 +41,7 @@ const Login = () => {
 
   const styles = {
     container: {
-      backgroundImage: `url(https://img.freepik.com/free-photo/landscape-green-grassland_1409-5576.jpg?t=st=1702540510~exp=1702544110~hmac=2daae7bf9ee5e529eb81190bf9d673629562eea5f1bb94a68de71aab459e0083&w=1380)`,
+      backgroundImage: `url(back.jpg)`,
       backgroundPosition: 'cover',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
